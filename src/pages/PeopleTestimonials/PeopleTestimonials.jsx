@@ -3,10 +3,10 @@ import CarosulPeoT from './CarosulPeoT'
 
 export default function PeopleTestimonials() {
   return (
-    <div> 
-      <CarosulPeoT></CarosulPeoT>
-      
-      
-    </div>
+    <div className="">
+    <h1 className=''>TESTIMONIALS</h1>
+        <CarosulPeoT></CarosulPeoT>
+      </div> 
   )
 }
+

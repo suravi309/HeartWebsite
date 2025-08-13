@@ -2,14 +2,14 @@ import {
   createBrowserRouter ,
 } from "react-router-dom"
 
-import Home from "../pages/Home";
+
 import MainLayout from "../Layouts/MainLayouts/MainLayouts";
 import Error from "../pages/Error/Error";
-// import Home from "../Pages/Home/Home/Home";
-// import Menu from "../Pages/Menu/Menu/Menu";
-// import OrderMain from "../Pages/Order/OrderMain";
-// import Login from "../component/Login/Login";
-
+import Home from "../pages/Home/Home";
+import Signup from "../pages/Signup/Signup";
+import PrivateRoute from "./PrivateRoute";
+import Secret from "../Secret/Secret";
+import Login from "../pages/Login/Login";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -20,18 +20,24 @@ const router = createBrowserRouter([
         path: "/",
         element:<Home></Home>,
       },
+      {
+        path: "login",
+        element:<Login></Login>,
+      },
+      {
+        path: "signup",
+        element:<Signup></Signup>,
+
+      },
+      
       // {
-      //   path: "menu",
-      //   element:<Menu></Menu>,
-      // },
-      // {
-      //   path: "order/:category",
-      //   element:<OrderMain></OrderMain>,
-      // },
-      // {
-      //   path: "login",
-      //   element:<Login></Login>,
-      // }
+      //     path: "/social",
+      //     element:<Social></Social>,
+      //   },
+        {
+          path:'secret',
+          element:<PrivateRoute><Secret></Secret></PrivateRoute>
+        }
     ],
   },
 ]);

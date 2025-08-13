@@ -1,5 +1,6 @@
-import video from '../../assets/banarvideo.mp4'
+import video from '../../../assets/banarvideo.mp4'
 export default function Banner() {
+
   return (
     <div>
       <div className="hero bg-base-200 min-h-screen">

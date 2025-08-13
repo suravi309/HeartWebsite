@@ -1,18 +1,56 @@
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
-
-// import required modules
-import { Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination } from "swiper/modules";
+const testimonials = [
+  {
+    id: 1,
+    name: "Alice Johnson",
+    designation: "Patient - Heart Care",
+    feedback:
+      "The doctors and staff were so caring and attentive. They explained everything clearly and made me feel at ease throughout my treatment.",
+    image: "https://randomuser.me/api/portraits/women/65.jpg",
+  },
+  {
+    id: 2,
+    name: "Robert Williams",
+    designation: "Patient - Orthopedic",
+    feedback:
+      "I can walk again without pain thanks to the wonderful care I received here. Highly recommended!",
+    image: "https://randomuser.me/api/portraits/men/66.jpg",
+  },
+  {
+    id: 3,
+    name: "Emily Davis",
+    designation: "Patient - Pediatrics",
+    feedback:
+      "My child was treated so kindly and professionally. We’re grateful for the excellent pediatric team.",
+    image: "https://randomuser.me/api/portraits/women/67.jpg",
+  },
+  {
+    id: 4,
+    name: "James Smith",
+    designation: "Patient - Neurology",
+    feedback:
+      "The diagnosis and treatment plan I received changed my life. The neurologist here is one of the best.",
+    image: "https://randomuser.me/api/portraits/men/68.jpg",
+  },
+  {
+    id: 5,
+    name: "Sophia Brown",
+    designation: "Patient - Dermatology",
+    feedback:
+      "My skin condition improved within weeks thanks to their expert advice and care.",
+    image: "https://randomuser.me/api/portraits/women/69.jpg",
+  },
+];
 
 export default function CarosulPeoT() {
   return (
-    <div className='py-20'>
+    <div className="py-20">
       <Swiper
-        slidesPerView={4}
+        slidesPerView={3}
         spaceBetween={30}
         centeredSlides={true}
         pagination={{
@@ -21,158 +59,23 @@ export default function CarosulPeoT() {
         modules={[Pagination]}
         className="mySwiper"
       >
-        
-        <div className=''>
-          <SwiperSlide>
-          <img
-                src="https://randomuser.me/api/portraits/women/44.jpg"
-                alt="Doctor"
-                className="w-20 h-20 rounded-tr-full rounded-bl-full rounded-br-full object-cover absolute bottom-5 left-60 "
-              /> 
-              <div className="card bg-primary text-primary-content w-70 h-70 rounded-tr-full rounded-bl-full rounded-br-full ">
-                <div className="card-body">
-                  <h2 className="card-title">Card title!</h2>
-                  <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                  <div className="card-actions justify-end">
-                    <img
-                src="https://randomuser.me/api/portraits/women/44.jpg"
-                alt="Doctor"
+        {testimonials.map((testimonial) => (
+          <SwiperSlide key={testimonial.id}>
+            <div className="card bg-primary text-primary-content w-70 h-70 rounded-tr-full rounded-bl-full rounded-br-full">
+              <img
+                src={testimonial.image}
+                alt={testimonial.name}
                 className="w-20 h-20 rounded-tr-full rounded-bl-full rounded-br-full object-cover absolute bottom-5 left-60 "
               />
-                  </div>
-                </div>
+              <div className="p-10">
+                <h2 className="text-lg font-semibold">{testimonial.name}</h2>
+                <p className="text-xs text-gray-200">{testimonial.designation}</p>
+                <p className="mt-2 text-sm">{testimonial.feedback}</p>
               </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-                src="https://randomuser.me/api/portraits/women/44.jpg"
-                alt="Doctor"
-                className="w-20 h-20 rounded-tr-full rounded-bl-full rounded-br-full object-cover absolute bottom-5 left-60 "
-              /> 
-              <div className="card bg-primary text-primary-content w-70 h-70 rounded-tr-full rounded-bl-full rounded-br-full">
-                <div className="card-body">
-                  <h2 className="card-title">Card title!</h2>
-                  <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                  <div className="card-actions justify-end">
-                    <img
-                src="https://randomuser.me/api/portraits/women/44.jpg"
-                alt="Doctor"
-                className="w-20 h-20 rounded-tr-full rounded-bl-full rounded-br-full object-cover absolute bottom-5 left-60 "
-              />
-                  </div>
-                </div>
-              </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <img
-                src="https://randomuser.me/api/portraits/women/44.jpg"
-                alt="Doctor"
-                className="w-20 h-20 rounded-tr-full rounded-bl-full rounded-br-full object-cover absolute bottom-5 left-60 "
-              /> 
-              <div className="card bg-primary text-primary-content w-70 h-70 rounded-tr-full rounded-bl-full rounded-br-full">
-                <div className="card-body">
-                  <h2 className="card-title">Card title!</h2>
-                  <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                  <div className="card-actions justify-end">
-                    <img
-                src="https://randomuser.me/api/portraits/women/44.jpg"
-                alt="Doctor"
-                className="w-20 h-20 rounded-tr-full rounded-bl-full rounded-br-full object-cover absolute bottom-5 left-60 "
-              />
-                  </div>
-                </div>
-              </div>
-        </SwiperSlide>
-
-
-        <SwiperSlide>
-          <img
-                src="https://randomuser.me/api/portraits/women/44.jpg"
-                alt="Doctor"
-                className="w-20 h-20 rounded-tr-full rounded-bl-full rounded-br-full object-cover absolute bottom-5 left-60 "
-              /> 
-              <div className="card bg-primary text-primary-content w-70 h-70 rounded-tr-full rounded-bl-full rounded-br-full">
-                <div className="card-body">
-                  <h2 className="card-title">Card title!</h2>
-                  <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                  <div className="card-actions justify-end">
-                    <img
-                src="https://randomuser.me/api/portraits/women/44.jpg"
-                alt="Doctor"
-                className="w-20 h-20 rounded-tr-full rounded-bl-full rounded-br-full object-cover absolute bottom-5 left-60 "
-              />
-                  </div>
-                </div>
-              </div>
-        </SwiperSlide>
-
-
-        <SwiperSlide>
-          <img
-                src="https://randomuser.me/api/portraits/women/44.jpg"
-                alt="Doctor"
-                className="w-20 h-20 rounded-tr-full rounded-bl-full rounded-br-full object-cover absolute bottom-5 left-60 "
-              /> 
-              <div className="card bg-primary text-primary-content w-70 h-70 rounded-tr-full rounded-bl-full rounded-br-full">
-                <div className="card-body">
-                  <h2 className="card-title">Card title!</h2>
-                  <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                  <div className="card-actions justify-end">
-                    <img
-                src="https://randomuser.me/api/portraits/women/44.jpg"
-                alt="Doctor"
-                className="w-20 h-20 rounded-tr-full rounded-bl-full rounded-br-full object-cover absolute bottom-5 left-60 "
-              />
-                  </div>
-                </div>
-              </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-                src="https://randomuser.me/api/portraits/women/44.jpg"
-                alt="Doctor"
-                className="w-20 h-20 rounded-tr-full rounded-bl-full rounded-br-full object-cover absolute bottom-5 left-60 "
-              /> 
-              <div className="card bg-primary text-primary-content w-70 h-70 rounded-tr-full rounded-bl-full rounded-br-full">
-                <div className="card-body">
-                  <h2 className="card-title">Card title!</h2>
-                  <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                  <div className="card-actions justify-end">
-                    <img
-                src="https://randomuser.me/api/portraits/women/44.jpg"
-                alt="Doctor"
-                className="w-20 h-20 rounded-tr-full rounded-bl-full rounded-br-full object-cover absolute bottom-5 left-60 "
-              />
-                  </div>
-                </div>
-              </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <img
-                src="https://randomuser.me/api/portraits/women/44.jpg"
-                alt="Doctor"
-                className="w-20 h-20 rounded-tr-full rounded-bl-full rounded-br-full object-cover absolute bottom-5 left-60 "
-              /> 
-              <div className="card bg-primary text-primary-content w-70 h-70 rounded-tr-full rounded-bl-full rounded-br-full">
-                <div className="card-body">
-                  <h2 className="card-title">Card title!</h2>
-                  <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                  <div className="card-actions justify-end">
-                    <img
-                src="https://randomuser.me/api/portraits/women/44.jpg"
-                alt="Doctor"
-                className="w-20 h-20 rounded-tr-full rounded-bl-full rounded-br-full object-cover absolute bottom-5 left-60 "
-              />
-                  </div>
-                </div>
-              </div>
-        </SwiperSlide>
-        </div>
-
-        
+            </div>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
-  )
+  );
 }

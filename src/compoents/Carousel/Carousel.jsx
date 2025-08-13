@@ -7,72 +7,56 @@ import { FaArrowCircleRight } from "react-icons/fa";
 
 
 export default function Carousel() {
-  // const flickingRef = React.useRef(null);
-
-  // const { isReachStart, isReachEnd, moveTo } = useFlickingReactiveAPI(flickingRef);
-
-  // ✅ Panel data
- const panels = [
+ const heartFacilities = [
   {
     id: 1,
-    img: "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
-    title: "Card 1",
-    desc: "This is card 1. A card component has a figure, a body, a title, and actions."
+    image: "https://i.ibb.co/5XVDmmZP/Cardiology-Consultation.jpg",
+    title: "Cardiology Consultation",
+    details: "Expert consultation to evaluate your heart health and recommend appropriate treatments."
   },
   {
     id: 2,
-    img: "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
-    title: "Card 2",
-    desc: "This is card 2. A card component has a figure, a body, a title, and actions."
+    image: "https://i.ibb.co/Cp9gY4tR/Electrocardiogram.jpg",
+    title: "Electrocardiogram (ECG/EKG)",
+    details: "A simple, non-invasive test to measure the electrical activity of your heart."
   },
   {
     id: 3,
-    img: "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
-    title: "Card 3",
-    desc: "This is card 3. A card component has a figure, a body, a title, and actions."
+    image: "https://i.ibb.co/r20MdWfC/Echocardiography.jpg",
+    title: "Echocardiography",
+    details: "An ultrasound scan that provides detailed images of your heart’s structure and function."
   },
   {
     id: 4,
-    img: "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
-    title: "Card 4",
-    desc: "This is card 4. A card component has a figure, a body, a title, and actions."
+    image: "https://i.ibb.co/BKTsc9VR/Stress-Testing.jpg",
+    title: "Stress Testing",
+    details: "Monitors your heart during physical exertion to identify any underlying issues."
   },
   {
     id: 5,
-    img: "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
-    title: "Card 5",
-    desc: "This is card 5. A card component has a figure, a body, a title, and actions."
+    image: "https://i.ibb.co/hFrGjrz3/Angiography-Angioplasty.jpg",
+    title: "Angiography & Angioplasty",
+    details: "Minimally invasive procedures to diagnose and treat blocked coronary arteries."
   },
   {
     id: 6,
-    img: "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
-    title: "Card 6",
-    desc: "This is card 6. A card component has a figure, a body, a title, and actions."
+    image: "https://i.ibb.co/Zz9NN552/Pacemaker-Implantation.jpg",
+    title: "Pacemaker Implantation",
+    details: "Procedure to implant a pacemaker device to regulate irregular heartbeats."
   },
   {
     id: 7,
-    img: "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
-    title: "Card 7",
-    desc: "This is card 7. A card component has a figure, a body, a title, and actions."
+    image: "https://i.ibb.co/SwdBRm9w/Cardiac-Rehabilitation.jpg",
+    title: "Cardiac Rehabilitation",
+    details: "Personalized exercise and education programs to help you recover and stay healthy after a cardiac event."
   },
   {
     id: 8,
-    img: "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
-    title: "Card 8",
-    desc: "This is card 8. A card component has a figure, a body, a title, and actions."
-  },
-  {
-    id: 9,
-    img: "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
-    title: "Card 9",
-    desc: "This is card 9. A card component has a figure, a body, a title, and actions."
-  },
-  {
-    id: 10,
-    img: "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp",
-    title: "Card 10",
-    desc: "This is card 10. A card component has a figure, a body, a title, and actions."
+    image: "https://i.ibb.co/VWh87xQ3/Heart-Healthy-Diet-Counseling.jpg",
+    title: "Heart-Healthy Diet Counseling",
+    details: "Guidance on nutrition and lifestyle changes to improve your heart health."
   }
+
 ];
 
 
@@ -104,7 +88,7 @@ export default function Carousel() {
         circular={false}
         style={{ height: "auto" }}
       >
-        {panels.map((panel, index) => (
+        {heartFacilities.map((panel, index) => (
           <div
             key={index}
             className="panel p-2 box-border"
@@ -112,16 +96,16 @@ export default function Carousel() {
             <div className="card bg-white w-60 shadow-sm mx-auto">
               <figure className="">
                 <img
-                  src={panel.img}
+                  src={panel.image}
                   alt={panel.title}
                   className="rounded-br-[60px]"
                 />
               </figure>
               <div className="card-body items-left text-left">
                 <h2 className="card-title">{panel.title}</h2>
-                <p>{panel.desc}</p>
+                <p>{panel.details}</p>
                 <div className="card-actions">
-                  <button className="btn btn-primary ml-30 rounded-tl-[20px]">Buy Now</button>
+                  <button className="btn btn-primary ml-30 rounded-tl-[20px]">Read  more</button>
                 </div>
               </div>
             </div>

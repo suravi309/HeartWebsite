@@ -1,4 +1,5 @@
-import aboutImg from '../../assets/doctor.avif';
+import aboutImg from '../../../assets/doctor.avif';
+
 
 export default function ImgAbout() {
   return (
